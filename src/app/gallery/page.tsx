@@ -1,6 +1,4 @@
 import { EventCard } from "../components/EventCard";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
 
 export default function Gallery() {
     const years = [2024, 2023, 2022, 2021];
@@ -67,7 +65,6 @@ export default function Gallery() {
                     ))}
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }
