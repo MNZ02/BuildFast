@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from 'sanity/desk'
+import eventSchema from "./sanity/schemas/event-schema";
 
 
 export const config = defineConfig({
@@ -7,5 +8,6 @@ export const config = defineConfig({
     dataset: "production",
     title: "Buildfast",
     basePath: "/admin",
-    plugins: [deskTool()]
+    plugins: [deskTool()],
+    schema: { types: [eventSchema] }
 })
