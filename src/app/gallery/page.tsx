@@ -9,25 +9,35 @@ export default function Gallery() {
             events: [
                 { day: 24, weekDay: "Thursday", title: "Event Name 1", description: "Short Description" },
                 { day: 2, weekDay: "Thursday", title: "Event Name 2", description: "Short Description" },
-                { day: 20, weekDay: "Monday", title: "Event Name 5", description: "Short Description" },
-                { day: 10, weekDay: "Tuesday", title: "Event Name 6", description: "Short Description" },
-                { day: 12, weekDay: "Thursday", title: "Event Name 7", description: "Short Description" },
-                { day: 1, weekDay: "Thursday", title: "Event Name 8", description: "Short Description" },
             ],
         },
         {
             month: "November",
             events: [
-                { day: 18, weekDay: "Friday", title: "Event Name 3", description: "Short Description" },
-                { day: 14, weekDay: "Saturday", title: "Event Name 4", description: "Short Description" },
+                { day: 18, weekDay: "Thursday", title: "Event Name 3", description: "Short Description" },
+                { day: 14, weekDay: "Thursday", title: "Event Name 4", description: "Short Description" },
+            ],
+        },
+        {
+            month: "December",
+            events: [
+
+                { day: 20, weekDay: "Thursday", title: "Event Name 5", description: "Short Description" },
+                { day: 10, weekDay: "Thursday", title: "Event Name 6", description: "Short Description" },
+            ],
+        },
+        {
+            month: "December",
+            events: [
+                { day: 12, weekDay: "Thursday", title: "Event Name 7", description: "Short Description" },
+                { day: 1, weekDay: "Thursday", title: "Event Name 8", description: "Short Description" },
             ],
         },
     ];
 
     return (
         <div className="min-h-screen bg-[#f4e8d6]">
-            {/* <Header /> */}
-            <main className="max-w-[1200px] mx-auto px-4 py-12">
+            <main className="max-w-[1200px] mx-auto px-4 pt-24 pb-12">
                 {/* Title & Year Selector */}
                 <div className="flex justify-between items-center mb-12">
                     <h1 className="text-4xl text-[#4A2511] font-bold">Gallery</h1>

@@ -1,10 +1,10 @@
 import { Plus } from "lucide-react"
 
 interface EventCardProps {
-    day: number
-    weekDay: string
-    title: string
-    description: string
+    day: number;
+    weekDay: string;
+    title: string;
+    description: string;
 }
 
 export function EventCard({ day, weekDay, title, description }: EventCardProps) {
@@ -24,6 +24,5 @@ export function EventCard({ day, weekDay, title, description }: EventCardProps) 
                 <Plus className="h-6 w-6 text-[#4A2511] border border-black rounded-full p-1" />
             </button>
         </div>
-    )
+    );
 }
-

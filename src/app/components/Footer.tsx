@@ -10,7 +10,7 @@ export function Footer() {
                     {/* Logo & Club Name */}
                     <div className="flex items-center gap-2">
                         <Image
-                            src="/vercel.svg"
+                            src="/vercel.svg" // Replace with your actual logo path
                             alt="ISS Club Logo"
                             width={80}
                             height={80}
@@ -20,41 +20,41 @@ export function Footer() {
                         </span>
                     </div>
                     {/* Quick Links Columns */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-32 text-[#4A2511] text-sm">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-32 text-[#4A2511] text-sm mt-8 md:mt-0">
                         <div>
-                            <p className="font-medium mb-2">Category 1</p>
+                            <p className="font-medium mb-2">Title</p>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 1
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 2
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 3
+                                Sublink
                             </Link>
                         </div>
                         <div>
-                            <p className="font-medium mb-2">Category 2</p>
+                            <p className="font-medium mb-2">Title</p>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 1
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 2
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 3
+                                Sublink
                             </Link>
                         </div>
                         <div>
-                            <p className="font-medium mb-2">Category 3</p>
+                            <p className="font-medium mb-2">Title</p>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 1
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 2
+                                Sublink
                             </Link>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
-                                Sublink 3
+                                Sublink
                             </Link>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ export function Footer() {
                 <hr className="border-[#4A2511] my-6" />
 
                 {/* Bottom Section: Quick Links & Privacy/Terms */}
-                <div className="flex flex-col md:flex-row md:justify-between">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
 
                     {/* Social Media Links */}
                     <div className="flex gap-6 mt-4 md:mt-0">
@@ -78,7 +78,7 @@ export function Footer() {
                             href="#"
                             className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity"
                         >
-                            YouTube
+                            Youtube
                         </Link>
                         <Link
                             href="#"
@@ -90,7 +90,7 @@ export function Footer() {
                             href="#"
                             className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity"
                         >
-                            TikTok
+                            Tiktok
                         </Link>
                     </div>
                     {/* Privacy & Terms */}
@@ -100,7 +100,7 @@ export function Footer() {
                         </Link>
                         <span className="mx-2">|</span>
                         <Link href="#" className="hover:opacity-80 transition-opacity">
-                            Terms & Conditions
+                            Terms & Condition
                         </Link>
                     </div>
                 </div>
