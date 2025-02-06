@@ -41,7 +41,7 @@ function Gallery() {
         <div className="min-h-screen bg-[#f4e8d6]">
             <main className="max-w-[1200px] mx-auto px-4 pt-24 pb-12">
                 {/* Title & Year Selector */}
-                <Titlebar name="Events" />
+                <Titlebar name="Events" showDate={true} />
 
                 {/* Events List */}
                 <div className="space-y-12">
