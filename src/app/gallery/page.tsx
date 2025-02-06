@@ -1,7 +1,9 @@
+import React from "react";
 import { EventCard } from "../components/EventCard";
+import Titlebar from "../components/Titlebar";
+export const years = [2024, 2023, 2022, 2021];
 
-export default function Gallery() {
-    const years = [2024, 2023, 2022, 2021];
+function Gallery() {
 
     const events = [
         {
@@ -39,21 +41,7 @@ export default function Gallery() {
         <div className="min-h-screen bg-[#f4e8d6]">
             <main className="max-w-[1200px] mx-auto px-4 pt-24 pb-12">
                 {/* Title & Year Selector */}
-                <div className="flex justify-between items-center mb-12">
-                    <h1 className="text-4xl text-[#4A2511] font-bold">Gallery</h1>
-                    <div className="flex gap-2">
-                        {years.map((year) => (
-                            <button
-                                key={year}
-                                className={`px-6 py-1.5 rounded-full text-sm border border-[#4A2511] transition ${year === 2024 ? "bg-[#4A2511] text-white" : "bg-transparent text-[#4A2511] hover:bg-[#4A2511]/10"
-                                    }`}
-                            >
-                                {year}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-                <hr className="border-[#4A2511] my-4" />
+                <Titlebar name="Events" />
 
                 {/* Events List */}
                 <div className="space-y-12">
@@ -78,3 +66,5 @@ export default function Gallery() {
         </div>
     );
 }
+
+export default Gallery;
