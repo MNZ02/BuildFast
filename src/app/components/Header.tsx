@@ -24,7 +24,7 @@ export function Header() {
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}
-                            className="text-sm font-custom text-[#4A2511] hover:opacity-80 transition-opacity"
+                            className="text-sm font-sans font-semibold text-[#4A2511] hover:opacity-80 transition-opacity"
                         >
                             {item}
                         </Link>
@@ -36,8 +36,8 @@ export function Header() {
                     <button className="text-[#4A2511] hover:opacity-80 transition-opacity">
                         <Search className="h-5 w-5" />
                     </button>
-                    <button className="text-sm font-medium text-[#4A2511]">EN</button>
-                    <button className="text-sm font-medium text-[#4A2511]">APPLY NOW</button>
+                    <button className="text-sm font-semibold text-[#4A2511] font-sans">EN</button>
+                    <button className="text-sm font-semibold text-[#4A2511] font-sans">APPLY NOW</button>
                 </div>
             </div>
         </header>
