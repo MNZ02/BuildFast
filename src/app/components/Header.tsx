@@ -9,7 +9,7 @@ export function Header() {
                 {/* Logo Section */}
                 <Link href="/" className="flex items-center gap-2">
                     <Image
-                        src="/vercel.svg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTUIwKRB8wxR5O1Hz4k1WTd-rDhSPUbm59tw&s"
                         alt="ISS Club Logo"
                         width={40}
                         height={40}
@@ -19,12 +19,12 @@ export function Header() {
                 </Link>
 
                 {/* Navigation Links */}
-                <nav className="flex items-center gap-8">
+                <nav className="flex items-center gap-6">
                     {["HOME", "EVENTS", "GALLERY", "GAMES"].map((item) => (
                         <Link
                             key={item}
                             href={`/${item.toLowerCase()}`}
-                            className="text-sm font-medium text-[#4A2511] hover:opacity-80 transition-opacity"
+                            className="text-sm font-custom text-[#4A2511] hover:opacity-80 transition-opacity"
                         >
                             {item}
                         </Link>

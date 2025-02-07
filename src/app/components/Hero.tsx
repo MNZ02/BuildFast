@@ -1,23 +1,43 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const Hero = () => {
     return (
-        <div className="relative h-[500px] overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full z-10">
+        <section className="relative w-full h-[800px]">
+            {/* Background Image */}
+            <div className="absolute inset-0">
                 <Image
-                    src="/images/hero-image.jpg"
+                    src="/university.png"
                     alt="Hero Image"
-                    layout="fill"
-                    objectFit="cover"
-                    priority // Added priority for hero image
+                    fill
+                    className="object-cover"
+                    priority
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20 z-20" />
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black opacity-20"></div>
             </div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-30">
-                <h1 className="text-4xl mb-5 font-normal">Lorem ipsum dolor sit amet consectetur.</h1> {/* Adjusted font-normal */}
-                <button className="bg-brown-light text-white py-2 px-6 border-none rounded-md cursor-pointer text-lg">Button</button> {/* Rounded-md and text-lg */}
+
+
+
+            {/* Hero Content */}
+            <div className="relative z-10 flex flex-col items-start justify-end h-full max-w-[1200px] mx-auto px-2 py-10 text-white">
+                <h1 className="text-5xl font-medium leading-snug max-w-5xl">
+                    Lorem ipsum dolor sit amet consectetur.
+                </h1>
+                <p className="mt-3 text-lg max-w-md">
+                    Lorem ipsum dolor sit amet consectetur. Mauris ipsum sed tincidunt vel.
+                </p>
+                <button className="absolute bottom-10 right-0 bg-[#FFC107] text-black py-2 px-6 lg:w-40 md:w-32 sm:w-24  rounded-md text-md font-light shadow-lg hover:bg-[#E0A800] transition">
+                    RSVP
+                </button>
             </div>
-        </div>
+
+            {/* Carousel Dots */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="w-3 h-3 bg-white rounded-full"></div>
+                <div className="w-3 h-3 bg-white rounded-full opacity-50"></div>
+                <div className="w-3 h-3 bg-white rounded-full opacity-50"></div>
+            </div>
+        </section>
     );
 };
 
