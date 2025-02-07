@@ -4,7 +4,7 @@ import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons'; // Im
 
 const UpcomingEvents = () => {
     return (
-        <section className="bg-beige-light py-20"> {/* Increased py-20 for more vertical padding */}
+        <section className="bg-[#ebd6b8] py-20"> {/* Increased py-20 for more vertical padding */}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Responsive container */}
                 <h2 className="text-brown-primary text-3xl font-normal mb-14 text-center"> {/* Title styling and increased margin-bottom */}
                     Upcoming Events
