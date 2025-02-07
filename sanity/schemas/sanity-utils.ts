@@ -10,11 +10,13 @@ export async function getEvents() {
     })
 
 
-    client.fetch(
-        groq`*[_type == "event"]`
-    ).then((events) => {
-        console.log(events)
-    })
+    try {
+        const events = await client.fetch(groq`*[_type == "event"]`);
+        return events;
+    } catch (error) {
+        console.error("Error fetching events:", error);
+        return [];
+    }
 
 
 }

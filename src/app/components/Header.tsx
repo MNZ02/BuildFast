@@ -23,7 +23,7 @@ export function Header() {
                     {["HOME", "EVENTS", "GALLERY", "GAMES"].map((item) => (
                         <Link
                             key={item}
-                            href={`/${item.toLowerCase()}`}
+                            href={`${item === 'HOME' ? '/' : item.toLowerCase()}`}
                             className="text-sm font-sans font-semibold text-[#4A2511] hover:opacity-80 transition-opacity"
                         >
                             {item}
