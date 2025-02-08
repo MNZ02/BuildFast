@@ -6,12 +6,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { urlFor } from "../../../sanity/schemas/sanity-image";
 
+
+interface SanityImage {
+    _type: "image";
+    asset: {
+        _ref: string;
+        _type: string;
+    };
+}
+
 interface Event {
     _id: string;
     title: string;
     description: string;
     date?: string;
-    image?: any; // Changed to 'any' because it could be an object from Sanity.
+    image?: SanityImage | string;
     location?: string;
     time?: string;
     day?: number;

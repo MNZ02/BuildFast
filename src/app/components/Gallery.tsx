@@ -4,6 +4,16 @@ import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { Key } from "react";
 import { urlFor } from "../../../sanity/schemas/sanity-image";
 
+
+interface SanityImage {
+    _type: "image";
+    asset: {
+        _ref: string;
+        _type: string;
+    };
+}
+
+
 const Gallery = async () => {
     const events = await getEvents();
 
@@ -25,7 +35,7 @@ const Gallery = async () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {galleryEvents.map(
                             (
-                                event: { image?: any; _id: Key | null | undefined },
+                                event: { image?: SanityImage | string; _id: Key | null | undefined },
                                 index: number
                             ) => {
 
