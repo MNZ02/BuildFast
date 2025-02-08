@@ -1,6 +1,7 @@
 import React from "react";
 import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { EventCard } from "../components/EventCard";
+import { truncate } from "../../../utils/truncate";
 import Titlebar from "../components/Titlebar";
 
 
@@ -25,6 +26,8 @@ async function Gallery() {
     const flatEvents: Event[] = await getEvents();
 
 
+
+
     const groupedEvents = flatEvents.reduce<Record<string, MonthGroup>>(
         (acc, event) => {
             if (!acc[event.month]) {
@@ -38,6 +41,9 @@ async function Gallery() {
 
 
     const monthGroups: MonthGroup[] = Object.values(groupedEvents);
+
+
+
 
     return (
         <div className="min-h-screen bg-[#f4e8d6] pt-12">
@@ -61,7 +67,7 @@ async function Gallery() {
                                                 day={event.day}
                                                 weekDay={event.weekDay}
                                                 title={event.title}
-                                                description={event.description}
+                                                description={truncate(event.description, 22)}
                                             />
                                         ))
                                     ) : (

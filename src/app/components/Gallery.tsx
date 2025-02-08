@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { Key } from "react";
+import { urlFor } from "../../../sanity/schemas/sanity-image";
 
 const Gallery = async () => {
-
     const events = await getEvents();
 
-
     const galleryEvents = events.slice(0, 6);
+
+    const fallbackImage =
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpkRo55g2im2brqkZGDGcXpW98SN_c-hJiAA&s";
 
     return (
         <section className="bg-[#F4E8D6] py-20">
@@ -18,15 +20,19 @@ const Gallery = async () => {
                     Gallery
                 </h2>
 
-
+                {/* Image Grid */}
                 {galleryEvents.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {galleryEvents.map(
-                            (event: { image: string; _id: Key | null | undefined }, index: number) => {
+                            (
+                                event: { image?: any; _id: Key | null | undefined },
+                                index: number
+                            ) => {
 
-                                const src =
-                                    event.image ||
-                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpkRo55g2im2brqkZGDGcXpW98SN_c-hJiAA&s";
+                                const src = event.image
+                                    ? urlFor(event.image).width(400).url()
+                                    : fallbackImage;
+
                                 return (
                                     <div key={event._id} className="rounded-lg overflow-hidden">
                                         <Image
@@ -42,8 +48,9 @@ const Gallery = async () => {
                         )}
                     </div>
                 ) : (
-
-                    <p className="text-center text-[#4A2511] text-lg">No images available.</p>
+                    <p className="text-center text-[#4A2511] text-lg">
+                        No images available.
+                    </p>
                 )}
 
                 {/* View All Button */}

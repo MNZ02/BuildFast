@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { urlFor } from "../../../sanity/schemas/sanity-image";
 
 interface Event {
     _id: string;
     title: string;
     description: string;
     date?: string;
-    image?: string;
+    image?: any; // Changed to 'any' because it could be an object from Sanity.
     location?: string;
     time?: string;
     day?: number;
@@ -25,6 +26,13 @@ interface UpcomingEventsProps {
 const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
     const router = useRouter();
 
+    function truncate(text: string, maxLength: number): string {
+        if (text.length > maxLength) {
+            return text.substring(0, maxLength) + "...";
+        }
+        return text;
+    }
+
     return (
         <section className="bg-[#EEDDC5] py-20">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,24 +41,32 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                     Upcoming Events
                 </h2>
 
-
                 {events.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
                         {events.map((event, index) => {
-                            // Fallback values in case properties are missing.
+                            // Fallback image URL in case event.image is not valid.
+                            const fallbackImage =
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpkRo55g2im2brqkZGDGcXpW98SN_c-hJiAA&s";
+
+                            // If event.image is an object, use urlFor to generate the URL.
+                            const imageUrl =
+                                event.image && typeof event.image === "object"
+                                    ? urlFor(event.image).width(400).url()
+                                    : typeof event.image === "string" && event.image.trim() !== ""
+                                        ? event.image
+                                        : fallbackImage;
+
+                            // Compute date values.
                             const eventDate = event.date ? new Date(event.date) : new Date();
                             const day = event.date ? eventDate.getDate() : "28";
                             const month = event.date
                                 ? eventDate.toLocaleString("default", { month: "long" })
                                 : "September";
-                            const imageUrl = event.image
-                                ? event.image
-                                : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpkRo55g2im2brqkZGDGcXpW98SN_c-hJiAA&s";
 
                             return (
                                 <div
                                     key={index}
-                                    className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+                                    className="bg-[#F3E8D8] border border-gray-300 rounded-lg overflow-hidden shadow-sm"
                                 >
                                     {/* Image Section */}
                                     <div className="relative h-[200px] w-full">
@@ -68,8 +84,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                                             {event.title || "Et viverra odio vulputate."}
                                         </h3>
                                         <p className="text-[#4A2511] text-xs mt-1">
-                                            {event.description ||
-                                                "Lorem ipsum dolor sit amet consectetur. Et viverra ut odio vulputate. Ligula velit dui dictum phasellus at. Quisque eros bibendum faucibus morbi velit."}
+                                            {truncate(event.description || "", 100)}
                                         </p>
 
                                         {/* Date, Time & Location */}
@@ -84,7 +99,10 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                                             </div>
                                             <div className="text-sm text-[#4A2511]">
                                                 <div className="flex items-center space-x-2">
-                                                    <FontAwesomeIcon icon={faMapMarkerAlt} className="h-4" />
+                                                    <FontAwesomeIcon
+                                                        icon={faMapMarkerAlt}
+                                                        className="h-4"
+                                                    />
                                                     <span>
                                                         {event.location || "Conference Room, Berkley"}
                                                     </span>

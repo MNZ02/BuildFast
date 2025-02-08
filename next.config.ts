@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
       'www.google.com',
       'encrypted-tbn0.gstatic.com',
       'img.freepik.com',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'cdn.sanity.io'
     ],
   },
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { EventCard } from "../components/EventCard";
+import { truncate } from "../../../utils/truncate";
 import Titlebar from "../components/Titlebar";
 
 
@@ -60,7 +61,7 @@ async function pastEvents() {
                                                 day={event.day}
                                                 weekDay={event.weekDay}
                                                 title={event.title}
-                                                description={event.description}
+                                                description={truncate(event.description, 22)}
                                             />
                                         ))
                                     ) : (
