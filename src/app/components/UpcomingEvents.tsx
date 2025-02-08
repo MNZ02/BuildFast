@@ -11,7 +11,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
         <section className="bg-[#EEDDC5] py-20">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Title */}
-                <h2 className="text-[#4A2511] text-5xl font-light mb-12 text-center font-serif">
+                <h2 className="text-[#4A2511] text-5xl font-light mb-12 font-serif">
                     Upcoming Events
                 </h2>
 
@@ -54,7 +54,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                                     </p>
 
                                     {/* Date, Time & Location */}
-                                    <div className="mt-4 flex items-center space-x-4">
+                                    <div className="mt-4 flex items-center justify-between">
                                         <div className="text-center">
                                             <span className="block text-5xl font-normal text-[#4A2511]">
                                                 {day}
@@ -90,8 +90,8 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
                 </div>
 
                 {/* See All Events Button */}
-                <div className="flex justify-center mt-10">
-                    <button className="bg-transparent border-2 border-[#4A2511] text-[#4A2511] py-1 px-4 rounded-3xl font-medium hover:bg-[#4A2511] hover:text-white transition">
+                <div className="flex justify-center mt-8">
+                    <button className="bg-transparent border-2 border-[#4A2511] text-[#4A2511] py-1 px-4 rounded-3xl font-medium hover:bg-[#4A2511] hover:text-white transition text-sm">
                         SEE ALL EVENTS →
                     </button>
                 </div>

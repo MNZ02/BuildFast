@@ -2,15 +2,14 @@ import React from "react";
 import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { EventCard } from "../components/EventCard";
 import Titlebar from "../components/Titlebar";
-export const years = [2024, 2023, 2022, 2021];
 
-async function Gallery() {
+async function pastEvents() {
     const events = await getEvents();
     return (
         <div className="min-h-screen bg-[#f4e8d6] pt-12">
             <main className="max-w-[1200px] mx-auto px-4 pt-24 pb-12">
                 {/* Title & Year Selector */}
-                <Titlebar name="Gallery" showDate={true} />
+                <Titlebar name="Past Events" showDate={true} />
 
                 {/* Events List */}
                 <div className="space-y-12">
@@ -42,4 +41,4 @@ async function Gallery() {
     );
 }
 
-export default Gallery;
+export default pastEvents;

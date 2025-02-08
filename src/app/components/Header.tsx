@@ -3,6 +3,20 @@ import Image from "next/image"
 import { Search } from "lucide-react"
 
 export function Header() {
+
+    const handleNavigation = (handle: string): string => {
+        if (handle === 'HOME') {
+            return '/';
+        } else if (handle === 'EVENTS') {
+            return '/pastEvents';
+        } else if (handle === 'GALLERY') {
+            return '/gallery';
+        } else if (handle === 'GAMES') {
+            return '/games';
+        }
+        return '/';
+    };
+
     return (
         <header className="bg-[#F3E5D8] shadow-md rounded-lg mx-12 mt-10 px-4 fixed top-0 left-0 right-0 z-50">
             <div className="max-w-[1500px] flex h-14 items-center justify-between">
@@ -23,7 +37,7 @@ export function Header() {
                     {["HOME", "EVENTS", "GALLERY", "GAMES"].map((item) => (
                         <Link
                             key={item}
-                            href={`${item === 'HOME' ? '/' : item.toLowerCase()}`}
+                            href={handleNavigation(item)}
                             className="text-sm font-sans font-semibold text-[#4A2511] hover:opacity-80 transition-opacity"
                         >
                             {item}
