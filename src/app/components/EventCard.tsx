@@ -11,7 +11,7 @@ export function EventCard({ day, weekDay, title, description }: EventCardProps) 
     return (
         <div className="flex items-center justify-between rounded-md border-2 border-[#4A2511] bg-[#f4e8d6] p-4 hover:bg-[#f4e8d6c0] transition-colors">
             <div className="flex gap-8">
-                <div className="flex flex-col items-center justify-center min-w-[100px]">
+                <div className="flex flex-col items-center justify-center min-w-[100px] border-r border-[#4A2511] pr-2">
                     <span className="text-5xl font-medium text-[#4A2511]">{day}</span>
                     <span className="text-sm text-[#4A2511]">{weekDay}</span>
                 </div>

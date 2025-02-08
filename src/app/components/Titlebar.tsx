@@ -8,7 +8,7 @@ export default function Titlebar({ name, showDate }: { name: string, showDate: b
         <div>
 
             <div className="flex justify-between items-center mb-2">
-                <h1 className="text-4xl text-[#4A2511] font-bold">{name}</h1>
+                <h1 className="text-5xl text-[#4A2511] font-normal font-serif">{name}</h1>
                 <div className="flex gap-2">
                     {
                         showDate ? (
