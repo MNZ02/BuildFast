@@ -64,7 +64,7 @@ const Gallery = async () => {
                 )}
 
                 {/* View All Button */}
-                <div className="flex justify-center mt-6">
+                <div className="flex justify-center mt-5">
                     <Link href="/gallery">
                         <button className="bg-transparent border-2 border-[#4A2511] text-[#4A2511] py-1 px-4 rounded-3xl font-medium hover:bg-[#4A2511] hover:text-white transition text-sm">
                             VIEW ALL →

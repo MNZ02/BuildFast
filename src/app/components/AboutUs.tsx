@@ -31,14 +31,14 @@ const AboutUs = () => {
 
                     <div className="flex flex-col">
                         <div className="text-gray-text text-sm leading-relaxed">
-                            <h3 className="text-gray-title text-2xl  mb-4 font-semibold">Lorem ipsum dolor sit amet consectetur</h3>
+                            <h3 className="text-gray-title text-2xl  mb-3 font-semibold">Lorem ipsum dolor sit amet consectetur</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur. Et viverra ut odio vulputate. Ligula velit dui dictum phasellus at. Quisque eros bibendum faucibus morbi velit. Porta morbi tellus cras ac pulvinar aliquam. Consequat cursus arcu mattis nisi consectetur. Sed ut et nibh magnis scelerisque cras. Aenean ipsum id sem egestas elit imperdiet odio ac. Auctor justo sed libero varius id quis vitae velit. Condimentum odio turpis nunc aliquam elementum et velit pulvinar. Habitant in id vel metus etiam. Augue eget nullam purus dictum sapien nisi.
                             </p>
                         </div>
 
                         {/* Images in a horizontal flex container */}
-                        <div className="flex gap-8 justify-between" >
+                        <div className="flex gap-16 " >
                             <div className="relative w-[200px] h-[150px] md:w-[320px] md:h-[420px]">
                                 <Image
                                     src="/university.png"
