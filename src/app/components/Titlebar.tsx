@@ -1,6 +1,5 @@
 import React from "react";
-import { years } from "../gallery/page";
-
+import { years } from "../../../utils/years";
 
 export default function Titlebar({ name, showDate }: { name: string, showDate: boolean }) {
     return (

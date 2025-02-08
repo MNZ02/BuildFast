@@ -1,12 +1,28 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
+interface Event {
+    _id: string;
+    title: string;
+    description: string;
+    date?: string;       // ISO date string from Sanity (optional)
+    image?: string;      // URL string for the event image (optional)
+    location?: string;
+    time?: string;
+    day?: number;
+    weekDay?: string;
+    month?: string;
+}
+
 interface UpcomingEventsProps {
-    events: any[]; // Ideally, replace `any` with a proper event type.
+    events: Event[];
 }
 
 const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
+    const router = useRouter();
     return (
         <section className="bg-[#EEDDC5] py-20">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +95,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
 
                                     {/* RSVP Button */}
                                     <div className="mt-6">
-                                        <button className="w-full py-2 border-2 border-[#4A2511] text-[#4A2511] font-bold rounded-md hover:bg-[#4A2511] hover:text-white transition">
+                                        <button className="w-full py-2 border-2 border-[#4A2511] text-[#4A2511] font-bold rounded-md hover:bg-[#4A2511] hover:text-white transition" onClick={() => router.push('/events')}>
                                             RSVP
                                         </button>
                                     </div>

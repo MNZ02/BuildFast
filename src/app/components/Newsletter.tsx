@@ -24,15 +24,15 @@ const Newsletter = () => {
                     </p>
 
                     {/* Input and Button Form */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0" >
                         <input
                             type="email"
                             placeholder="Email"
-                            className="w-full sm:w-80 px-5 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brown-light focus:border-transparent text-gray-text placeholder-gray-text bg-[#F3E8D8]"  /* Adjusted width, padding, and added focus styles */
+                            className="w-full sm:w-80 md:w-[400px] px-5 py-2 rounded-l-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brown-light focus:border-transparent bg-[#F3E8D8]"  /* Adjusted width, padding, and added focus styles */
                         />
                         <button
                             type="submit"
-                            className="w-full sm:w-auto px-8 py-3 rounded-md bg-brown-primary text-white hover:bg-brown-light transition-colors duration-200" /* Adjusted padding */
+                            className="w-full sm:w-auto md:w-[200px] px-8 py-2 rounded-r-2xl bg-brown-primary text-white hover:bg-brown-light transition-colors duration-200 bg-[#402b1a]" /* Adjusted padding */
                         >
                             Subscribe
                         </button>
