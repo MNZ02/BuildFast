@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const AboutUs = () => {
     return (
-        <section className="bg-white-off py-16">
+        <section className="bg-white-off py-14">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-gray-title text-5xl font-normal mb-12 text-[#4A2511] py-6 font-serif">
+                <h2 className="text-gray-title text-6xl font-normal mb-8 text-[#4A2511] py-6 font-serif">
                     About Us
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-[0.6fr_1fr] gap-x-10 gap-y-10 items-start">
