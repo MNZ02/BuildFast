@@ -8,11 +8,11 @@ export function Header() {
         if (handle === 'HOME') {
             return '/';
         } else if (handle === 'EVENTS') {
-            return '/pastEvents';
+            return '/events';
         } else if (handle === 'GALLERY') {
             return '/gallery';
-        } else if (handle === 'GAMES') {
-            return '/games';
+        } else if (handle === 'PAST EVENTS') {
+            return '/pastEvents';
         }
         return '/';
     };
@@ -34,7 +34,7 @@ export function Header() {
 
                 {/* Navigation Links */}
                 <nav className="flex items-center gap-6">
-                    {["HOME", "EVENTS", "GALLERY", "GAMES"].map((item) => (
+                    {["HOME", "EVENTS", "GALLERY", "PAST EVENTS"].map((item) => (
                         <Link
                             key={item}
                             href={handleNavigation(item)}
