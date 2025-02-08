@@ -1,13 +1,13 @@
 import React from "react";
 import { years } from "../../../utils/years";
 
-export default function Titlebar({ name, showDate }: { name: string, showDate: boolean }) {
+export default function Titlebar({ name, showDate, fontName, textSize, fontWeight }: { name: string, showDate: boolean, fontName: string, textSize: string, fontWeight: string }) {
     return (
 
         <div>
 
             <div className="flex justify-between items-center mb-2">
-                <h1 className="text-5xl text-[#4A2511] font-normal font-serif">{name}</h1>
+                <h1 className={`text-${textSize} text-[#4A2511] font-${fontWeight} font-${fontName}`}>{name}</h1>
                 <div className="flex gap-2">
                     {
                         showDate ? (

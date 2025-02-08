@@ -43,7 +43,7 @@ async function pastEvents() {
         <div className="min-h-screen bg-[#f4e8d6] pt-12">
             <main className="max-w-[1200px] mx-auto px-4 pt-24 pb-12">
                 {/* Title & Year Selector */}
-                <Titlebar name="Past Events" showDate={true} />
+                <Titlebar name="Past events" showDate={true} fontName="serif" textSize="5xl" fontWeight="normal" />
 
                 {/* Events List */}
                 <div className="space-y-12">

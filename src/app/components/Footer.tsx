@@ -15,14 +15,14 @@ export function Footer() {
                             width={80}
                             height={80}
                         />
-                        <span className="text-[#4A2511] text-4xl font-semibold">
+                        <span className="text-[#4A2511] text-4xl font-semibold font-serif">
                             ISS Club
                         </span>
                     </div>
                     {/* Quick Links Columns */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-32 text-[#4A2511] text-sm mt-8 md:mt-0">
                         <div>
-                            <p className="font-medium mb-2">Title</p>
+                            <p className="font-semibold mb-2">Title</p>
                             <Link href="#" className="block hover:opacity-80 transition-opacity">
                                 Sublink
                             </Link>
@@ -69,20 +69,20 @@ export function Footer() {
                     {/* Social Media Links */}
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link
-                            href="#"
-                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity"
+                            href="https://www.instagram.com"
+                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity underline"
                         >
                             Instagram
                         </Link>
                         <Link
-                            href="#"
-                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity"
+                            href="https://www.youtube.com"
+                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity underline"
                         >
                             Youtube
                         </Link>
                         <Link
-                            href="#"
-                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity"
+                            href="https://www.twitter.com"
+                            className="text-[#4A2511] text-sm hover:opacity-80 transition-opacity underline"
                         >
                             X
                         </Link>
@@ -95,11 +95,11 @@ export function Footer() {
                     </div>
                     {/* Privacy & Terms */}
                     <div className="mt-6 md:mt-0 flex items-center text-sm text-[#4A2511]">
-                        <Link href="#" className="hover:opacity-80 transition-opacity">
+                        <Link href="#" className="hover:opacity-80 transition-opacity underline">
                             Privacy & Policy
                         </Link>
                         <span className="mx-2">|</span>
-                        <Link href="#" className="hover:opacity-80 transition-opacity">
+                        <Link href="#" className="hover:opacity-80 transition-opacity underline">
                             Terms & Condition
                         </Link>
                     </div>
