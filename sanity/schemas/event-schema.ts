@@ -16,14 +16,14 @@ export default defineType({
             title: 'Description',
             type: 'text',
         }),
-        // Keep the date field if you want the full datetime.
+
         defineField({
             name: 'date',
             title: 'Date',
             type: 'datetime',
             description: 'Full date and time for the event',
         }),
-        // Additional fields for easier grouping/filtering.
+
         defineField({
             name: 'day',
             title: 'Day',

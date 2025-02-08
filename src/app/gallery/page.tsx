@@ -3,7 +3,7 @@ import { getEvents } from "../../../sanity/schemas/sanity-utils";
 import { EventCard } from "../components/EventCard";
 import Titlebar from "../components/Titlebar";
 
-// Define an interface for a single event.
+
 interface Event {
     _id: string;
     day: number;
@@ -11,20 +11,20 @@ interface Event {
     title: string;
     description: string;
     month: string;
-    // Optionally include additional fields such as date, image, location, time, etc.
+
 }
 
-// Define an interface for a group of events by month.
+
 interface MonthGroup {
     month: string;
     events: Event[];
 }
 
 async function Gallery() {
-    // Assume getEvents() returns a flat array of Event objects.
+
     const flatEvents: Event[] = await getEvents();
 
-    // Group events by their 'month' property.
+
     const groupedEvents = flatEvents.reduce<Record<string, MonthGroup>>(
         (acc, event) => {
             if (!acc[event.month]) {
@@ -36,7 +36,7 @@ async function Gallery() {
         {}
     );
 
-    // Convert the grouped events into an array of MonthGroup.
+
     const monthGroups: MonthGroup[] = Object.values(groupedEvents);
 
     return (

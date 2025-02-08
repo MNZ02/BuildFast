@@ -10,7 +10,7 @@ export function Footer() {
                     {/* Logo & Club Name */}
                     <div className="flex items-center gap-2">
                         <Image
-                            src="/vercel.svg" // Replace with your actual logo path
+                            src="/vercel.svg"
                             alt="ISS Club Logo"
                             width={80}
                             height={80}

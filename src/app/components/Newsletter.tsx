@@ -28,11 +28,11 @@ const Newsletter = () => {
                         <input
                             type="email"
                             placeholder="Email"
-                            className="w-full sm:w-80 md:w-[400px] px-5 py-2 rounded-l-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brown-light focus:border-transparent bg-[#F3E8D8]"  /* Adjusted width, padding, and added focus styles */
+                            className="w-full sm:w-80 md:w-[400px] px-5 py-2 rounded-l-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brown-light focus:border-transparent bg-[#F3E8D8]"
                         />
                         <button
                             type="submit"
-                            className="w-full sm:w-auto md:w-[200px] px-8 py-2 rounded-r-2xl bg-brown-primary text-white hover:bg-brown-light transition-colors duration-200 bg-[#402b1a]" /* Adjusted padding */
+                            className="w-full sm:w-auto md:w-[200px] px-8 py-2 rounded-r-2xl bg-brown-primary text-white hover:bg-brown-light transition-colors duration-200 bg-[#402b1a]"
                         >
                             Subscribe
                         </button>
